@@ -1,0 +1,140 @@
+body{
+  background-color: #F1F2F2;
+  margin: 0;
+  padding: 0;
+}
+
+.head{
+  height: 80px;
+  width: 100%;
+  margin: 0 auto;
+  background-color:#22167A;
+  padding: 20px 25% 20px 25%;
+  position: relative;
+}
+#logo{
+  width: 70px;
+  height: 35px;
+  float: left;
+  margin-right: 25%;
+}
+#input{
+  width:35%;
+  margin-top:3px;
+}
+.form01{
+  border-radius: 10px 0px 0px 10px;
+  border:1px solid #4331A9;
+  background-color:#4331A9;
+  padding: 7px;
+  height: 35px;
+  width: calc(100% - 35px);
+}
+.sch_btn{
+  width:35px;
+  height:34px;
+  background-color:#4331A9;
+  border:0;
+  height: 35px;
+  border-radius: 0px 10px 10px 0px;
+  position: absolute;
+}
+.glyphicon-search{
+  width: 15px;
+  height: 15px;
+  color: white;
+  margin: 0px;
+}
+
+#container_style{
+  width: 950px;
+  padding-top: 150px;
+}
+
+.title{
+  color: #22167A;
+  font-size: 15px;
+}
+.poster_regi{
+  width: 250px;
+  display: inline-block;
+}
+#box{
+  border: 1px solid #4331A9;
+  width: 245.454px;
+  height: 305.586px;
+  background-color: white;
+  padding: 135px 70px 150px 80px;
+  display: inline-block;
+  margin-bottom: 17px;
+}
+
+#btn_style{
+  background-color: #4331A9;
+  color: white;
+  border-radius:10px 10px 10px 10px;
+  border: 0;
+  outline: 0;
+  width: 90px;
+  height:30px;
+  display: inline-block;
+}
+
+#second_box{
+  display: inline-block;
+  position: absolute;
+  width: 631.926px;
+  padding-left: 80.998px;
+  padding-top: 50px;
+}
+
+.div_style{
+  padding-bottom: 10px;
+}
+
+.input_box{
+  width: 450px;
+  height: 30px;
+  border: 1px solid #4331A9;
+  float: right;
+}
+
+.input_box_small{
+  width: 170px;
+  height: 30px;
+  border: 1px solid #4331A9;
+  margin-left: 23px;
+}
+
+
+/*학생 등록 css부분*/
+
+#btn_poster{
+  background-color: #4331A9;
+  color: white;
+  border-radius:10px 10px 10px 10px;
+  border: 0;
+  outline: 0;
+  width: 245.45px;
+  height:30px;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+#btn_student{
+  background-color: #F1F2F2;
+  color: #4331A9;
+  border-radius:10px 10px 10px 10px;
+  outline: 0;
+  border: 1px solid #4331A9;
+  width: 245.45px;
+  height:30px;
+  display: inline-block;
+}
+
+.input_number{
+  width: 72px;
+  height: 30px;
+  border: 1px solid #4331A9;
+  margin-left: 23px;
+}

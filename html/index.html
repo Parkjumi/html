@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
+  <script src="main.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="main.css">
+  <title>DONE</title>
+
+  <script>
+  $(document).ready(function() {
+    $('#return').bind('click',function() {
+        $(document).animate({scrollTop:'0'},680);
+    });
+  });
+  </script>
+</head>
+
+<body>
+  <header>
+      <nav class="head">
+        <img src="design/logo.png" id="logo">
+
+          <div class="input-group" id="input">
+            <input type="text" class="form01" placeholder="Search">
+              <button id="search_btn" class="sch_btn" type="button">
+                <i class="glyphicon glyphicon-search"></i>
+              </button>
+
+          </div><!-- /input-group -->
+      </nav>
+      <div id="point_back">
+        <div class="container">
+          <img id="system" src="design/user.png">
+          <div id="log_in">
+            <h3 id="font_sign">Sign up</h3>
+            <p class="font_sign2">You are on the way to join you are community</p>
+            <form action="">
+              <input type="text" placeholder="  First Name" class="login_id">
+              <input type="Email" placeholder="  Email" class="login_id">
+              <div id="login_center">
+                <input style="display:inline-block;color:white;" type="checkbox">
+                <p style="color:white; font-size:12px;display:inline-block;">로그인 상태 유지</p>
+                <div id="sns">
+                  <img class="icon" src="design/kkaotalk.png">
+                  <img class="icon" src="design/twitter.png">
+                  <img class="icon" src="design/facebook.png">
+                </div>
+              </div>
+              <input type="button" value="SUBMIT" id="submit">
+            </form>
+          </div>
+        </div>
+      </div>
+   </header>
+
+  <img src="design/white_btn.png" id="return">
+  <div class="intro">
+    <img class="intro" src="design/background_2.jpg">
+  </div>
+</body>
+</html>
