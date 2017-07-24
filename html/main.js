@@ -1,7 +1,25 @@
 var express = require('express');
 var session = require('express-session');
 var bodyParser = require('body-parser');
+var mysql = require('mysql');
 var app = express();
+
+var con = mysql.createConnection({
+  host : 'localhost',
+  user : 'root',
+  password : '20152595',
+  database: 'user'
+});
+
+con.connect(function(err) {
+  if (err) throw err;
+  con.query("SELECT * FROM users", function (err, result, fields) {
+    if (err) throw err;
+    console.log(result);
+  });
+});
+
+
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(session({
   secret: 'abcedasfsaf',
@@ -20,11 +38,13 @@ app.get('/',function(req, res) {
 });
 
 app.get('/success', function(req,res) {
+  res.send('<script type="text/javascript">alert("로그인 성공");location.href="/"</script>');
   if(req.session.displayName){
-    res.send(`<a href="/logout">Logout</a>`);
+    // res.send(`<h1>환영합니다.</h1><a style="text-decoration:none" href="/logout">Logout</a>`);
+    // res.end(`<a style="text-decoration:none" href="/">Logout</a>`);
+    // res.redirect('/');
   }else{
-    res.send(`<h1>Welcome</h1>
-    <a href="/auth/login">Login</a>`);
+    res.send(`<h1>Welcome</h1><a href="/auth/login">Login</a>`);
   }
 });
 
@@ -34,15 +54,15 @@ app.post('/login', function(req, res){
     password : '1234',
     displayName : 'PJM'
   };
+
   var name = req.body.username;
   var pw = req.body.password;
-
+  console.log(name,pw);
   if(name === user.username && pw === user.password){
     req.session.displayName = user.displayName;
     res.redirect('/success');
   }else{
-    res.send('<a href=/>login</a>');
-    console.log(name,pw); // 로그인 불일치 됬을 때
+    res.send(name); // 로그인 불일치 됬을 때
   }
 });
 

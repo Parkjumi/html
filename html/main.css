@@ -62,8 +62,8 @@ body{
 }
 
 #system{
-  width: 1000px;
-  height: 360px;
+  width: 950px;
+  height: 350px;
   float: left;
   padding-left: 350px;
 }
@@ -119,6 +119,8 @@ body{
   border: 0;
   border-radius: 8px 8px 8px 8px;
   width: 75%;
+  height: 20px;
+  color: #757575;
   margin-left: 10%;
   margin-bottom: 20%;
   outline: 0;
