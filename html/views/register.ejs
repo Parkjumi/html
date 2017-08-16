@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/register.css">
+  <script type="text/javascript" src="function.js"></script>
+  <title>DONE</title>
+</head>
+<body>
+  <header>
+    <nav class="head">
+      <img src="design/logo.png" id="logo" onclick="movehome()">
+      <div class="input-group" id="input">
+        <input type="text" class="form01" placeholder="Search">
+          <button id="search_btn" class="sch_btn" type="button">
+            <i class="glyphicon glyphicon-search"></i>
+          </button>
+      </div>
+    </nav>
+    <div class="menu">
+      <div class="menu_in">
+        <span>DSU POST &nbsp;| &nbsp;동서대 링크사업단</span>
+        <a class="link" href="#">학생 관리</a>
+        <a class="link" href="#">포스터 관리</a>
+      </div>
+    </div>
+  </header>
+<!-- enctype="multipart/form-data" -->
+  <form action="/upload" method="post" enctype="multipart/form-data">
+    <div class="container" id="container_style">
+        <div class="poster_regi">
+          <strong><p class="title">포스터등록</p></strong>
+          <br>
+          <div id="box">
+            <img style="width:243px;height:304px" src="design/poster.png" id="posters">
+            <!-- <img id="logo_sty" src="design/logo_color.png"> -->
+          </div>
+          <!-- <button type="button" id="btn_style">
+            파일선택
+          </button> -->
+          <input onchange="fileInfo(this)" type="file" name="upload" accept="image/gif, image/jpeg, image/png" />
+        </div>
+
+        <div id="second_box">
+            <div class="div_style">
+              <strong><span class="title">프로그램 명</span></strong>
+              <input placeholder="이 포스터의 이름을 지어주세요." name="title" type="text" class="input_box">
+            </div>
+            <hr style="border-top:1px solid #A5A7A9;">
+            <div class="div_style">
+              <strong><span class="title">참여대상</span></strong>
+              <input placeholder="누구를 위한 프로그램이죠?" name="person" type="text" class="input_box">
+            </div>
+            <hr style="border-top:1px solid #A5A7A9;">
+            <div class="div_style">
+              <strong><span class="title">일시(기간)</span></strong>
+              <input placeholder="언제부터 언제까지인가요?" name="date" type="text" class="input_box">
+            </div>
+            <hr style="border-top:1px solid #A5A7A9;">
+            <div style="display:inline-block;">
+              <strong><span class="title">신청마감일</span></strong>
+              <input placeholder="연도.월.일" name="finish" type="text" class="input_box_small">
+            </div>
+            <div style="display:inline-block;padding-left:15px;">
+              <strong><span class="title">신청인원</span></strong>
+              <input placeholder="00명" name="pNumber" type="text" class="input_box_small">
+            </div>
+            <hr style="border-top:1px solid #A5A7A9;">
+            <div style="display:inline-block;">
+              <strong><span class="title">분류</span></strong>
+              <input style="margin-left:68px;" placeholder="카테고리 분류" name="category" type="text" class="input_box_small">
+            </div>
+            <hr style="border-top:1px solid #A5A7A9;">
+            <button id="btn_poster" type="submit">DONE</button>
+        </div>
+    </div>
+  </form>
+
+</body>
+</html>

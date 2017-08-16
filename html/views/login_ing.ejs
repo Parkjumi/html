@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>DONE</title>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <header>
+      <nav class="head">
+        <img src="design/logo.png" id="logo" onclick="movehome()">
+          <div class="input-group" id="input">
+            <input type="text" class="form01" placeholder="Search">
+              <button id="search_btn" class="sch_btn" type="button">
+                <i class="glyphicon glyphicon-search"></i>
+              </button>
+
+          </div><!-- /input-group -->
+      </nav>
+      <div id="point_back">
+        <div style="position:absolute; width:1903px;">
+          <img id="system" src="design/user.png">
+          <div id="log_in">
+            <h2 id="font_sign">Welcome</h2>
+            <p id="person">님 환영합니다.</p>
+            <div style="padding-top:30px;">
+              <button type="button" id="submit" onclick='location.href="/logout"'>Logout
+            </div>
+          </div>
+        </div>
+      </div>
+   </header>
+
+  <div>
+    <img class="intro" src="design/background_2.jpg">
+    <img src="design/white_btn.png" id="return"></button>
+  </div>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+       $('#return').click(function() {
+           $('html, body').animate({scrollTop: 0}, 400);
+           return false;
+       });
+    });
+  </script>
+
+  <!-- <script type="text/javascript">
+    $.ajax({
+      type:'get',
+      url:'/login_ing',
+      success:function(res) {
+        $('#person').text(+'님 환영합니다.');
+      }
+    }); -->
+
+  </script>
+
+  <script type="text/javascript">
+    function movepage(){
+      location.href = "/sign_up";
+    }
+
+    function movehome(){
+      location.href = "/";
+    }
+  </script>
+
+</body>
+</html>

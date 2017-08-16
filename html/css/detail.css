@@ -1,0 +1,151 @@
+body{
+  margin: 0;
+  padding: 0;
+  background-color: #F1F2F2;
+}
+a:link { color: white; text-decoration: none;}
+a:visited { color: white; text-decoration: none;}
+a:hover { color: white; text-decoration: none;}
+
+.head{
+  height: 80px;
+  width: 1903px;
+  background-color:#22167A;
+  padding: 20px 450px 20px 450px;
+}
+
+#logo{
+  width: 70px;
+  height: 35px;
+  float: left;
+  margin-right: 300px;
+  cursor: pointer;
+}
+#input{
+  width:300px;
+  margin-top:3px;
+  float: left;
+}
+
+.form01{
+  border-radius: 10px 0px 0px 10px;
+  border:1px solid #4331A9;
+  background-color:#4331A9;
+  padding: 7px;
+  height: 35px;
+  width: calc(100% - 35px);
+}
+.sch_btn{
+  width:35px;
+  height:34px;
+  background-color:#4331A9;
+  border:0;
+  height: 35px;
+  border-radius: 0px 10px 10px 0px;
+  position: absolute;
+}
+
+.menu{
+  height: 80px;
+  width: 1903px;
+  background-color:#4331A9;
+  padding: 30px 450px 20px 450px;
+  color: white;
+}
+.menu_in{
+  width: 930px;
+  padding-left: 40px;
+}
+.link{
+  color: white;
+  float: right;
+  padding-left: 20px;
+}
+
+#box{
+  padding-top: 100px;
+  width: 1000px;
+}
+
+.left{
+  width: 350px;
+  display: inline-block;
+}
+
+.font{
+  color: #22167A;
+  font-weight: bold;
+  padding-bottom: 20px;
+  margin: 0;
+}
+
+.img_style{
+  width: 230px;
+  height: auto;
+  /*border: 1px solid #22167A;*/
+}
+
+.btn_style{
+  border: 1px solid #22167A;
+  width: 230px;
+  height: 30px;
+  margin-top: 12px;
+  background-color: white;
+  border-radius: 10px;
+  color: #22167A;
+  font-weight: bold;
+}
+
+.info{
+  padding-top: 20px;
+  width: 230px;
+}
+
+.info_2{
+  padding: 8px;
+}
+
+.right{
+  display: inline-block;
+  position: absolute;
+  width: 630px;
+  height: 630px;
+  border: 1px solid #5140AF;
+  border-bottom: none;
+  padding-bottom: 50px;
+}
+
+.menu2{
+
+}
+
+.contents{
+  display: inline-block;
+  cursor: pointer;
+  width: 210px;
+  text-align: center;
+  height: 45px;
+  float: left;
+  padding-top: 12px;
+  color: #22167A;
+  font-weight: bold;
+}
+
+.click{
+  cursor: pointer;
+  display: inline-block;
+  background-color: #CECBE3;
+  color: #22167A;
+  border:1px solid #5140AF;
+  border-top: none;
+  float: left;
+  text-align: center;
+  width: 209px;
+  height: 45px;
+  padding-top: 12px;
+  font-weight: bold;
+}
+
+.main_contents{
+  padding: 80px 50px;
+}

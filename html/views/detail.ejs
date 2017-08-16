@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/detail.css">
+  <title>DONE</title>
+</head>
+
+<body>
+  <header>
+    <nav class="head">
+      <img src="design/logo.png" id="logo" onclick="movehome()">
+      <div class="input-group" id="input">
+        <input type="text" class="form01" placeholder="Search">
+          <button id="search_btn" class="sch_btn" type="button">
+            <i class="glyphicon glyphicon-search"></i>
+          </button>
+      </div>
+    </nav>
+    <div class="menu">
+      <div class="menu_in">
+        <span>DSU POST &nbsp;| &nbsp;동서대 링크사업단</span>
+        <a class="link" href="#">학생 관리</a>
+        <a class="link" href="#">포스터 관리</a>
+      </div>
+    </div>
+  </header>
+
+    <div class="container" id="box">
+      <div class="left">
+        <h3 class="font" id="title">오픈 테마스쿨</h3>
+        <img class="img_style" src="poster/open.png">
+        <button class="btn_style" type="button" name="button">메세지 관리</button>
+        <button class="btn_style" type="button" name="button">포스터 수정</button>
+        <div class="info">
+          <div class="info_2">
+            <span style="margin-right:10px;color:#22167A;" class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
+            <span style="color:#22167A;">051) 320 - 2001</span>
+          </div>
+          <div class="info_2">
+            <span style="margin-right:10px;color:#22167A;" class="glyphicon glyphicon-globe" aria-hidden="true"></span>
+            <a style="color:#22167A;" href="http://www.dongseo.ac.kr">http://www.dongseo.ac.kr</a>
+          </div>
+          <div class="info_2">
+            <span style="margin-right:10px;color:#22167A;" class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+            <span style="color:#22167A;">dongseo@dsu.com</span>
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="menu2">
+          <div class="contents">
+            상세내용
+          </div>
+          <div class="click">
+            <span onclick="moveContents()">신청현황</span>
+          </div>
+          <div class="click" style="border-left:none;border-right:none;">
+            Q&A
+          </div>
+        </div>
+        <div class="main_contents">
+          <h1 style="color:#4331A9;">Header</h1>
+        </div>
+      </div>
+
+    </div>
+
+  <script type="text/javascript">
+    function movehome(){
+      location.href = "/";
+    }
+
+    function moveContents() {
+      location.href = "/detail_2";
+    }
+
+  </script>
+</body>
+</html>

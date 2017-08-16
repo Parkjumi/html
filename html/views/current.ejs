@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/current.css">
+  <title>DONE</title>
+
+</head>
+<body>
+  <header>
+    <nav class="head">
+      <img src="design/logo.png" id="logo" onclick="movehome()">
+      <div class="input-group" id="input">
+        <input type="text" class="form01" placeholder="Search">
+          <button id="search_btn" class="sch_btn" type="button">
+            <i class="glyphicon glyphicon-search"></i>
+          </button>
+      </div>
+      <div class="sign_up">
+        <span style="color:white;"><%= name %></span>
+        <img src="design/user_default.png" id="img_person">
+        <button type="button" id="submit" onclick='location.href="/logout"'>Logout
+      </div>
+    </nav>
+    <div class="bg">
+      <div id="menu" >
+        <div style="display:inline-block;">
+            <img src="design/building.png" class="linc_img">
+        </div>
+        <div id="linc_second">
+          <p class="linc_name">DSUPOST || 동서대 링크사업단</p>
+          <br>
+          <span style="margin-top:25px;" class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
+          <p class="linc_name" style="margin-right:80px;">051) 320 - 2001</p>
+          <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
+          <a id="a_line" href="http://www.dongseo.ac.kr">http://www.dongseo.ac.kr</a>
+          <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+          <p class="linc_name" style="margin-top:10px;margin-bottom:0px;">dongseo@dsu.com</p>
+        </div>
+
+        <div id="linc_third">
+          <button onclick="movePoster()" type="button" class="btn_style">
+            <span style="color:white">포스터 등록</span>
+          </button>
+          <button style="background-color:white;" type="button" class="btn_style">
+            <span style="color:#4331A9;">통계</span>
+          </button>
+          <button type="button" class="btn_style">
+            <span style="color:white">학생관리</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div id="menu_list">
+    <div class="dropdown">
+      <button type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+        전체
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+      </ul>
+    </div>
+    <div class="dropdown">
+      <button type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+        분류
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">강좌</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">근로장학</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">장학</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">연수</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">대회</a></li>
+      </ul>
+    </div>
+    <div class="input-group" id="input2">
+      <input id="search" style="width: 280px;" type="text" class="form-control" placeholder="검색어를 입력해주세요">
+      <span class="input-group-btn" style="background-color:#4331A9">
+        <button class="btn" type="button">검색</button>
+      </span>
+    </div><!-- /input-group -->
+  </div>
+
+  <table frame=void border="1" id="posters">
+    <tbody>
+      <tr class="tr">
+        <% for(let i in data){ %>
+          <td class="poster" id="click">
+            <div class="origin">
+              <div class="poster_name">
+                <img class="person_icon" src="design/person icon.png">
+                <span id="title" style="color:white;font-size:11px;"><%= data[i].title %></span>
+                <script type="text/javascript">
+                  alert("<%= data[i].title %>");
+                </script>
+              </div>
+              <img class="poster_img" src="<%= data[i].img %>">
+              <div class="info">
+                <p class="contents" style="font-size:14px;">
+                  <%= data[i].person %>
+                </p>
+                <span class="category" style="font-size:12px;">
+                  <%= data[i].category %>
+                </span>
+                <p class="date" style="font-size:14px;margin-top:5px;">
+                  <%= data[i].date %>
+                </p>
+              </div>
+              <div class="tail">
+                빈 공간
+              </div>
+            </div>
+            <div class="change">
+              <img class="img" src="design/icon.png">
+              <img class="img" src="design/chart.png">
+              <button onclick="detail()" id="btn_detail" type="button"><img class="img" src="design/mark.png"></button>
+            </div>
+          </td>
+        <% } %>
+      </tr>
+    </tbody>
+  </table>
+
+  <script type="text/javascript">
+    function movehome(){
+      location.href = "/";
+    }
+    function movePoster(){
+      location.href = "/poster_reg"
+    }
+  </script>
+
+  <script type="text/javascript">
+    function detail() {
+      $('#btn_detail').click(function () {
+        $.ajax({
+          url:'/detail',
+          success:function (data) {
+            alert("됐음");
+          }
+        })
+      });
+    }
+  </script>
+</body>
+</html>

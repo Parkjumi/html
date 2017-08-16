@@ -1,0 +1,170 @@
+body{
+  background-color: #F1F2F2;
+  margin: 0;
+  padding: 0;
+}
+
+a:link { color: white; text-decoration: none;}
+a:visited { color: white; text-decoration: none;}
+a:hover { color: white; text-decoration: none;}
+
+.head{
+  height: 80px;
+  width: 1903px;
+  background-color:#22167A;
+  padding: 20px 450px 20px 450px;
+}
+#logo{
+  width: 70px;
+  height: 35px;
+  float: left;
+  margin-right: 300px;
+}
+
+#logo:hover{
+  cursor: pointer;
+}
+
+#input{
+  width:300px;
+  margin-top:3px;
+  float: left;
+}
+.form01{
+  border-radius: 10px 0px 0px 10px;
+  border:1px solid #4331A9;
+  background-color:#4331A9;
+  padding: 7px;
+  height: 35px;
+  width: calc(100% - 35px);
+}
+.sch_btn{
+  width:35px;
+  height:34px;
+  background-color:#4331A9;
+  border:0;
+  height: 35px;
+  border-radius: 0px 10px 10px 0px;
+  position: absolute;
+}
+.glyphicon-search{
+  width: 15px;
+  height: 15px;
+  color: white;
+  margin: 0px;
+}
+
+.menu{
+  height: 80px;
+  width: 1903px;
+  background-color:#4331A9;
+  padding: 30px 450px 20px 450px;
+  color: white;
+}
+
+.menu_in{
+  width: 930px;
+  padding-left: 40px;
+}
+
+.link{
+  color: white;
+  float: right;
+  padding-left: 20px;
+}
+
+#container_style{
+  width: 950px;
+  padding-top: 120px;
+}
+
+.title{
+  color: #22167A;
+  font-size: 15px;
+}
+
+.poster_regi{
+  width: 250px;
+  display: inline-block;
+}
+#box{
+  border: 1px solid #4331A9;
+  width: 245.454px;
+  height: 305.586px;
+  background-color: white;
+  /*padding: 135px 70px 150px 80px;*/
+  display: inline-block;
+  margin-bottom: 17px;
+}
+
+#stu_poster{
+  background-color: #4331A9;
+  border: 0;
+  color: white;
+  width: 247px;
+  border-radius: 8px;
+  outline: 0;
+  height: 28px;
+  margin-bottom: 15px;
+}
+
+#student{
+  border: 1px solid #4331A9;
+  background-color: #F1F2F2;
+  border-radius: 8px;
+  width: 247px;
+  height: 28px;
+  color: #4331A9;
+}
+
+#btn_style{
+  background-color: #4331A9;
+  color: white;
+  border-radius:10px 10px 10px 10px;
+  border: 0;
+  outline: 0;
+  width: 90px;
+  height:30px;
+  display: inline-block;
+}
+
+#second_box{
+  display: inline-block;
+  position: absolute;
+  width: 631.926px;
+  padding-left: 80.998px;
+  padding-top: 50px;
+}
+
+.div_style{
+  padding-bottom: 10px;
+}
+
+.input_box{
+  width: 450px;
+  height: 30px;
+  padding-left: 10px;
+  border: 1px solid #4331A9;
+  float: right;
+}
+
+.input_box_small{
+  width: 170px;
+  height: 30px;
+  padding-left: 10px;
+  border: 1px solid #4331A9;
+  margin-left: 23px;
+}
+
+#btn_poster{
+  border: 1px solid #4331A9;
+  background-color: #F1F2F2;
+  border-radius: 8px;
+  width: 140px;
+  height: 35px;
+  font-size: 15px;
+  color: #4331A9;
+  font-weight: bold;
+  float: right;
+  margin-top: 50px;
+}
