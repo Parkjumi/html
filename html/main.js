@@ -103,7 +103,7 @@ app.get('/', function (req,res) {
       }
     });
   } else {
-  res.render('index');
+    res.render('index');
   }
 });
 
@@ -191,9 +191,19 @@ app.post('/upload', upload.any(), function (req,res) {
 
 module.exports = app;
 
-app.get("/detail", function (req,res) {
-  console.log(req.body.title);
-  res.render('detail');
+app.get("/detail/:id", function (req,res) {
+  var test = req.params.id;
+  // console.log('test : ', test);
+  var sql = 'SELECT * FROM reg_poster';
+  var ttt = '';
+  con.query(sql, function(err, result, rows) {
+    if(!err) {
+      console.log("eeee", result[test].img);
+      res.render('detail', {title: result[test].title, img:result[test].img, person:result[test].person, date:result[test].date,finish:result[test].finish, category:result[test].category});
+    } else {
+      console.log('err');
+    }
+  });
 });
 
 app.get('/detail_2', function (req,res) {

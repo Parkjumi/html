@@ -8,14 +8,14 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="css/detail.css">
+  <link rel="stylesheet" href="../css/detail.css">
   <title>DONE</title>
 </head>
 
 <body>
   <header>
     <nav class="head">
-      <img src="design/logo.png" id="logo" onclick="movehome()">
+      <img src="../design/logo.png" id="logo" onclick="movehome()">
       <div class="input-group" id="input">
         <input type="text" class="form01" placeholder="Search">
           <button id="search_btn" class="sch_btn" type="button">
@@ -31,11 +31,10 @@
       </div>
     </div>
   </header>
-
     <div class="container" id="box">
       <div class="left">
-        <h3 class="font" id="title">오픈 테마스쿨</h3>
-        <img class="img_style" src="poster/open.png">
+        <h3 class="font" id="title"><%= title %></h3>
+        <img class="img_style" src="../<%= img %>">
         <button class="btn_style" type="button" name="button">메세지 관리</button>
         <button class="btn_style" type="button" name="button">포스터 수정</button>
         <div class="info">
@@ -55,21 +54,24 @@
       </div>
       <div class="right">
         <div class="menu2">
-          <div class="contents">
+          <div class="contents" id="contents">
             상세내용
           </div>
-          <div class="click">
-            <span onclick="moveContents()">신청현황</span>
+          <div class="click" id="click_2">
+            <span id="second_click">신청현황</span>
           </div>
           <div class="click" style="border-left:none;border-right:none;">
             Q&A
           </div>
         </div>
         <div class="main_contents">
-          <h1 style="color:#4331A9;">Header</h1>
+          <h4>프로그램명 : <%= title%></h4>
+          <h4>참여대상 : <%= person%></h4>
+          <h4>일시(기간) : <%= date%></h4>
+          <h4>신청마감일 : <%= finish%></h4>
+          <h4>분류 : <%= category%></h4>
         </div>
       </div>
-
     </div>
 
   <script type="text/javascript">
@@ -77,9 +79,19 @@
       location.href = "/";
     }
 
-    function moveContents() {
-      location.href = "/detail_2";
-    }
+    $('#second_click').click(function () {
+      $("#contents").attr('class','click');
+      $("#contents").css('border-left','none');
+      $("#click_2").attr('class','contents');
+      $("#click_2").css('border-right','1px solid #5140AF');
+      $(".main_contents").hide();
+    });
+
+    $('#contents').click(function () {
+      $("#contents").attr('class','contents');
+      $("#click_2").attr('class','click');
+      $(".main_contents").show();
+    });
 
   </script>
 </body>

@@ -94,38 +94,42 @@
 
   <table frame=void border="1" id="posters">
     <tbody>
-      <tr class="tr">
-        <% for(let i in data){ %>
-          <td class="poster" id="click">
+      <tr class="tr" id="click">
+        <%
+          var arr = new Array();
+         for(var i = 0;i < data.length;i++)
+         {
+            var item = data[i];
+            arr[i] = i;
+            console.log(arr[i]);
+          %>
+          <td class="poster">
             <div class="origin">
-              <div class="poster_name">
-                <img class="person_icon" src="design/person icon.png">
-                <span id="title" style="color:white;font-size:11px;"><%= data[i].title %></span>
-                <script type="text/javascript">
-                  alert("<%= data[i].title %>");
-                </script>
+                <div class="poster_name">
+                  <img class="person_icon" src="design/person icon.png">
+                  <span style="color:white;font-size:11px;"><%= item.title %></span>
+                </div>
+                <img class="poster_img" src="<%= item.img %>">
+                <div class="info">
+                  <p class="contents" style="font-size:14px;">
+                    <%= item.person %>
+                  </p>
+                  <span class="category" style="font-size:12px;">
+                    <%= item.category %>
+                  </span>
+                  <p class="date" style="font-size:14px;margin-top:5px;">
+                    <%= item.date %>
+                  </p>
+                </div>
+                <div class="tail">
+                  빈 공간
+                </div>
               </div>
-              <img class="poster_img" src="<%= data[i].img %>">
-              <div class="info">
-                <p class="contents" style="font-size:14px;">
-                  <%= data[i].person %>
-                </p>
-                <span class="category" style="font-size:12px;">
-                  <%= data[i].category %>
-                </span>
-                <p class="date" style="font-size:14px;margin-top:5px;">
-                  <%= data[i].date %>
-                </p>
+              <div class="change">
+                <img class="img" src="design/icon.png">
+                <img class="img" src="design/chart.png">
+                <a href="/detail/<%= arr[i] %>"><img class="img" src="design/mark.png"></a>
               </div>
-              <div class="tail">
-                빈 공간
-              </div>
-            </div>
-            <div class="change">
-              <img class="img" src="design/icon.png">
-              <img class="img" src="design/chart.png">
-              <button onclick="detail()" id="btn_detail" type="button"><img class="img" src="design/mark.png"></button>
-            </div>
           </td>
         <% } %>
       </tr>
@@ -142,16 +146,25 @@
   </script>
 
   <script type="text/javascript">
-    function detail() {
-      $('#btn_detail').click(function () {
-        $.ajax({
-          url:'/detail',
-          success:function (data) {
-            alert("됐음");
-          }
-        })
-      });
-    }
+  function test(i){
+    var urll = "/detail/1";
+    alert(urll);
+    $.ajax({
+      url: '/detail/3',
+      type:'get',
+      success: function (result) {
+        console.log("데이터 삽입");
+      }
+    });
+    // $.get(
+    //   '/detail',
+    //   { number: i },
+    //   function () {
+    //     console.log("goog");
+    //   },
+    //   'json'
+    // );
+  }
   </script>
 </body>
 </html>
